@@ -10,10 +10,19 @@ import UIKit
 
 class EventDetailViewController: UIViewController {
 
+    @IBOutlet weak var eventImageView: UIImageView!
+    @IBOutlet weak var posterLabel: UILabel!
+
+    var eventDetailModel: EventModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.title = eventDetailModel.eventTitle
+        self.eventImageView.image = eventDetailModel.eventImage
+        self.posterLabel.text = eventDetailModel.poster
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EE1BA655-147E-4EA2-B5BB-EE7BCC06193E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Oryx</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1A96A3B8B9102BC5F1BC9828485AD1E14B98B0DB</key>
+		<string>https://github.com/brianendo/oryxapp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Oryx.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1A96A3B8B9102BC5F1BC9828485AD1E14B98B0DB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/brianendo/oryxapp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1A96A3B8B9102BC5F1BC9828485AD1E14B98B0DB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1A96A3B8B9102BC5F1BC9828485AD1E14B98B0DB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Oryx</string>
+		</dict>
+	</array>
+</dict>
+</plist>

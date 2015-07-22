@@ -17,6 +17,9 @@
 		8E837D4F1B5F4A2600A076CC /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D4E1B5F4A2600A076CC /* FeedTableViewCell.swift */; };
 		8E837D511B5F5C8C00A076CC /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D501B5F5C8C00A076CC /* EventModel.swift */; };
 		8E837D531B5F658D00A076CC /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D521B5F658D00A076CC /* EventDetailViewController.swift */; };
+		8E837D551B5FFE5500A076CC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D541B5FFE5500A076CC /* Post.swift */; };
+		8E837D571B5FFE7B00A076CC /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D561B5FFE7B00A076CC /* PostService.swift */; };
+		8E837D591B5FFE9900A076CC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D581B5FFE9900A076CC /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		8E837D4E1B5F4A2600A076CC /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		8E837D501B5F5C8C00A076CC /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		8E837D521B5F658D00A076CC /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		8E837D541B5FFE5500A076CC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		8E837D561B5FFE7B00A076CC /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		8E837D581B5FFE9900A076CC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 				8E837D351B5F45F200A076CC /* LaunchScreen.xib */,
 				8E837D2B1B5F45F200A076CC /* Oryx.xcdatamodeld */,
 				8E837D271B5F45F200A076CC /* Supporting Files */,
+				8E837D541B5FFE5500A076CC /* Post.swift */,
+				8E837D561B5FFE7B00A076CC /* PostService.swift */,
+				8E837D581B5FFE9900A076CC /* Settings.swift */,
 			);
 			path = Oryx;
 			sourceTree = "<group>";
@@ -227,8 +236,11 @@
 				8E837D531B5F658D00A076CC /* EventDetailViewController.swift in Sources */,
 				8E837D2A1B5F45F200A076CC /* AppDelegate.swift in Sources */,
 				8E837D4F1B5F4A2600A076CC /* FeedTableViewCell.swift in Sources */,
+				8E837D571B5FFE7B00A076CC /* PostService.swift in Sources */,
 				8E837D4D1B5F465500A076CC /* FeedViewController.swift in Sources */,
 				8E837D511B5F5C8C00A076CC /* EventModel.swift in Sources */,
+				8E837D591B5FFE9900A076CC /* Settings.swift in Sources */,
+				8E837D551B5FFE5500A076CC /* Post.swift in Sources */,
 				8E837D2D1B5F45F200A076CC /* Oryx.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

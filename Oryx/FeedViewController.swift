@@ -70,7 +70,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "showEventDetail" {
-            let detailVC: EventDetailViewController = segue.destinationViewController as EventDetailViewController
+            let detailVC: EventDetailViewController = segue.destinationViewController as! EventDetailViewController
             let indexPath = self.tableView.indexPathForSelectedRow()
             let thisEvent = eventArray[indexPath!.row]
             detailVC.eventDetailModel = thisEvent
@@ -88,7 +88,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let thisEvent = eventArray[indexPath.row]
         
-        var cell: FeedTableViewCell = tableView.dequeueReusableCellWithIdentifier("feedCell") as FeedTableViewCell
+        var cell: FeedTableViewCell = tableView.dequeueReusableCellWithIdentifier("feedCell") as! FeedTableViewCell
         
         cell.eventTitle.text = thisEvent.eventTitle
         cell.posterLabel.text = thisEvent.poster

@@ -26,7 +26,7 @@ class PostService {
         let task = NSURLSession.sharedSession().dataTaskWithURL(nsURL!) {
             (data, response, error) in
             var error:NSError?
-            var response = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+            var response = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
             callback(response)
         }
         task.resume()

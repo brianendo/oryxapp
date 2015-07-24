@@ -20,6 +20,8 @@
 		8E837D551B5FFE5500A076CC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D541B5FFE5500A076CC /* Post.swift */; };
 		8E837D571B5FFE7B00A076CC /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D561B5FFE7B00A076CC /* PostService.swift */; };
 		8E837D591B5FFE9900A076CC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D581B5FFE9900A076CC /* Settings.swift */; };
+		8E837D5B1B60A51000A076CC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D5A1B60A51000A076CC /* ProfileViewController.swift */; };
+		8E837D5F1B60B4B300A076CC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D5E1B60B4B300A076CC /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8E837D231B5F45F200A076CC;
 			remoteInfo = Oryx;
+		};
+		8E837D661B60B52A00A076CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E837D611B60B52A00A076CC /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		8E837D681B60B52A00A076CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E837D611B60B52A00A076CC /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -50,6 +66,9 @@
 		8E837D541B5FFE5500A076CC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		8E837D561B5FFE7B00A076CC /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		8E837D581B5FFE9900A076CC /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		8E837D5A1B60A51000A076CC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8E837D5E1B60B4B300A076CC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		8E837D611B60B52A00A076CC /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../Programming/CUAppDev/RedditClient - Lecture 8/RedditClient/Vendor/Alamofire/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +110,12 @@
 		8E837D261B5F45F200A076CC /* Oryx */ = {
 			isa = PBXGroup;
 			children = (
+				8E837D601B60B50400A076CC /* Vendor */,
 				8E837D291B5F45F200A076CC /* AppDelegate.swift */,
 				8E837D4C1B5F465500A076CC /* FeedViewController.swift */,
 				8E837D4E1B5F4A2600A076CC /* FeedTableViewCell.swift */,
 				8E837D301B5F45F200A076CC /* Main.storyboard */,
+				8E837D5A1B60A51000A076CC /* ProfileViewController.swift */,
 				8E837D521B5F658D00A076CC /* EventDetailViewController.swift */,
 				8E837D501B5F5C8C00A076CC /* EventModel.swift */,
 				8E837D331B5F45F200A076CC /* Images.xcassets */,
@@ -131,6 +152,24 @@
 				8E837D411B5F45F200A076CC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E837D601B60B50400A076CC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				8E837D611B60B52A00A076CC /* Alamofire.xcodeproj */,
+				8E837D5E1B60B4B300A076CC /* SwiftyJSON.swift */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		8E837D621B60B52A00A076CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E837D671B60B52A00A076CC /* Alamofire.framework */,
+				8E837D691B60B52A00A076CC /* AlamofireTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +239,12 @@
 			mainGroup = 8E837D1B1B5F45F200A076CC;
 			productRefGroup = 8E837D251B5F45F200A076CC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8E837D621B60B52A00A076CC /* Products */;
+					ProjectRef = 8E837D611B60B52A00A076CC /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8E837D231B5F45F200A076CC /* Oryx */,
@@ -207,6 +252,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8E837D671B60B52A00A076CC /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 8E837D661B60B52A00A076CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8E837D691B60B52A00A076CC /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 8E837D681B60B52A00A076CC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8E837D221B5F45F200A076CC /* Resources */ = {
@@ -235,12 +297,14 @@
 			files = (
 				8E837D531B5F658D00A076CC /* EventDetailViewController.swift in Sources */,
 				8E837D2A1B5F45F200A076CC /* AppDelegate.swift in Sources */,
+				8E837D5B1B60A51000A076CC /* ProfileViewController.swift in Sources */,
 				8E837D4F1B5F4A2600A076CC /* FeedTableViewCell.swift in Sources */,
 				8E837D571B5FFE7B00A076CC /* PostService.swift in Sources */,
 				8E837D4D1B5F465500A076CC /* FeedViewController.swift in Sources */,
 				8E837D511B5F5C8C00A076CC /* EventModel.swift in Sources */,
 				8E837D591B5FFE9900A076CC /* Settings.swift in Sources */,
 				8E837D551B5FFE5500A076CC /* Post.swift in Sources */,
+				8E837D5F1B60B4B300A076CC /* SwiftyJSON.swift in Sources */,
 				8E837D2D1B5F45F200A076CC /* Oryx.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

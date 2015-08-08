@@ -8,11 +8,14 @@
 
 import UIKit
 
-class EventDetailViewController: UIViewController {
+class EventDetailViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var posterLabel: UILabel!
 
+    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var collectionViewLayout: UICollectionViewFlowLayout!
+    
     var eventDetailModel: EventModel!
     
     override func viewDidLoad() {
@@ -23,6 +26,22 @@ class EventDetailViewController: UIViewController {
         self.title = eventDetailModel.eventTitle
         self.eventImageView.image = eventDetailModel.eventImage
         self.posterLabel.text = eventDetailModel.poster
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        let height: CGFloat = 80.0
+        let width = self.view.bounds.size.width
+        
+        let cellSize = CGSize(width: width, height: height)
+        
+        if (!CGSizeEqualToSize(self.collectionViewLayout.itemSize, cellSize)) {
+            self.collectionViewLayout.itemSize = cellSize;
+            self.collectionViewLayout.invalidateLayout()
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

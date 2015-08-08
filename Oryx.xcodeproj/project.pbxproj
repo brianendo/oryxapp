@@ -22,6 +22,7 @@
 		8E837D591B5FFE9900A076CC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D581B5FFE9900A076CC /* Settings.swift */; };
 		8E837D5B1B60A51000A076CC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D5A1B60A51000A076CC /* ProfileViewController.swift */; };
 		8E837D5F1B60B4B300A076CC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E837D5E1B60B4B300A076CC /* SwiftyJSON.swift */; };
+		DE2D5DE11B743006000676C7 /* PerformerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2D5DE01B743006000676C7 /* PerformerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		8E837D5A1B60A51000A076CC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8E837D5E1B60B4B300A076CC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		8E837D611B60B52A00A076CC /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../Programming/CUAppDev/RedditClient - Lecture 8/RedditClient/Vendor/Alamofire/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		DE2D5DE01B743006000676C7 /* PerformerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformerCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				8E837D601B60B50400A076CC /* Vendor */,
 				8E837D291B5F45F200A076CC /* AppDelegate.swift */,
 				8E837D4C1B5F465500A076CC /* FeedViewController.swift */,
+				DE2D5DE01B743006000676C7 /* PerformerCollectionViewCell.swift */,
 				8E837D4E1B5F4A2600A076CC /* FeedTableViewCell.swift */,
 				8E837D301B5F45F200A076CC /* Main.storyboard */,
 				8E837D5A1B60A51000A076CC /* ProfileViewController.swift */,
@@ -306,6 +309,7 @@
 				8E837D551B5FFE5500A076CC /* Post.swift in Sources */,
 				8E837D5F1B60B4B300A076CC /* SwiftyJSON.swift in Sources */,
 				8E837D2D1B5F45F200A076CC /* Oryx.xcdatamodeld in Sources */,
+				DE2D5DE11B743006000676C7 /* PerformerCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +503,7 @@
 				8E837D481B5F45F200A076CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E837D491B5F45F200A076CC /* Build configuration list for PBXNativeTarget "OryxTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +512,7 @@
 				8E837D4B1B5F45F200A076CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

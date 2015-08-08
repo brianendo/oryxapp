@@ -8,9 +8,9 @@
 
 import UIKit
 
-class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FeedViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var tableView: UITableView!
+    //@IBOutlet weak var tableView: UITableView!
     
     var eventArray: [EventModel] = []
     
@@ -26,9 +26,13 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let event1 = EventModel(eventTitle: "Gareth Emery", poster: "1015Folsom", endorser: "Brian", going: "5", eventImage: UIImage(named: "GarethEmery")!)
         let event2 = EventModel(eventTitle: "Oliver Heldens", poster: "RubySkye", endorser: "Chris", going: "15", eventImage: UIImage(named: "OliverHeldens")!)
-        let event3 = EventModel(eventTitle: "Tchami", poster: "InfusionLounge", endorser: "", going: "10", eventImage: UIImage(named: "Tchami1")!)
+        let event3 = EventModel(eventTitle: "Tchami", poster: "InfusionLounge", endorser: nil, going: "10", eventImage: UIImage(named: "Tchami1")!)
         
         eventArray = [event1, event2, event3]
+        
+       //Set table view in bounds of navbar and tabbar
+        self.tableView.contentInset = UIEdgeInsetsMake(CGRectGetHeight(self.tabBarController!.navigationController!.navigationBar.frame), 0.0, CGRectGetHeight(self.tabBarController!.tabBar.frame), 0.0)
+        
         
 //        service = PostService()
 //        service.getPosts {
@@ -36,8 +40,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //            self.loadPosts(response["posts"]! as NSArray)
 //        }
         // Add these for postCollection
-        
-        self.tableView.reloadData()
+       
+        //self.tableView.reloadData()
     }
     
 //    func loadPosts(posts:NSArray) {
@@ -71,8 +75,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if segue.identifier == "showEventDetail" {
             let detailVC: EventDetailViewController = segue.destinationViewController as! EventDetailViewController
-            let indexPath = self.tableView.indexPathForSelectedRow()
-            let thisEvent = eventArray[indexPath!.row]
+            let indexPath = self.tableView.indexPathForSelectedRow()!
+            let thisEvent = eventArray[indexPath.row]
             detailVC.eventDetailModel = thisEvent
         }
         
@@ -80,11 +84,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // UITableViewDataSource
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return eventArray.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let thisEvent = eventArray[indexPath.row]
         
@@ -92,16 +96,22 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell.eventTitle.text = thisEvent.eventTitle
         cell.posterLabel.text = thisEvent.poster
-        cell.endorserLabel.text = thisEvent.endorser
+        if let endorser = thisEvent.endorser{
+            cell.endorserLabel.text = thisEvent.endorser
+        }
+        else{
+            cell.endorseImageView.hidden = true
+        }
         cell.goingLabel.text = thisEvent.going
         cell.eventImageView.image = thisEvent.eventImage
+        
         
         return cell
     }
     
     // UITableViewDelegate
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         performSegueWithIdentifier("showEventDetail", sender: self)
         

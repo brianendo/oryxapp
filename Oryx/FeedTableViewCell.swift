@@ -15,10 +15,11 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var posterLabel: UILabel!
     @IBOutlet weak var endorserLabel: UILabel!
     @IBOutlet weak var goingLabel: UILabel!
+    @IBOutlet var endorseImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        //self.endorseImageView.contentMode = .ScaleAspectFit
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

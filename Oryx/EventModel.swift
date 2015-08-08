@@ -12,7 +12,7 @@ import UIKit
 struct  EventModel {
     var eventTitle: String
     var poster: String
-    var endorser: String
+    var endorser: String?
     var going: String
     var eventImage: UIImage
     
